@@ -19,7 +19,7 @@ function [S, f, t] = stft(x, window, hop, NFFT, fs)
 %   t           Time vector (starting from 0). Same units as 1/fs.
 %
 % Please note that unlike MATLAB's builtin function spectrogram, this
-% implementation of the STFT is causal, meaning that S(:,i) corresponds to a
+% implementation of the STFT is causal. For example, if hop=1, then S(:,i) corresponds to a
 % segment of x whos *last* index is i. More precisely:
 % S(:,i,j) = fft(x(i-L+1:i,j).*window, NFFT)
 % Where L = length(window), and x is zeropadded where neccessary.
