@@ -34,7 +34,7 @@ function [S, f, t] = stft(x, window, hop, NFFT, fs)
 
 %% default values
 if nargin<2 || isempty(window)
-    window = hann(128,'periodic');
+    window = sqrt(hann(128,'periodic'));
 end
 windowLen = length(window);
 
