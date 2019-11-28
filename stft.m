@@ -73,7 +73,7 @@ if nargout>=2
     f = (0:NFFT-1)'/NFFT * fs;
 end
 if nargout>=3
-    t = (0:hop:size(S,2)-1)'/fs;
+    t = (0:size(S,2)-1)'*hop/fs;
 end
 
 end
