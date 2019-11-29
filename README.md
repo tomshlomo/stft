@@ -8,3 +8,5 @@ The ISTFT is calculated in the least-squares sense acording to [1], so it has pe
 Run "example.mlx" for a demonstration.
 
 [1] Griffin, Daniel, and Jae Lim. "Signal estimation from modified short-time Fourier transform." IEEE Transactions on Acoustics, Speech, and Signal Processing 32.2 (1984): 236-243.
+
+[![View Short Time Fourier Transform and its least squares inverse on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/73475-short-time-fourier-transform-and-its-least-squares-inverse)
