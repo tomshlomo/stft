@@ -19,7 +19,7 @@ function [x, k] = istft(S, window, hop, symFlag)
 %   x - a time domain signal. For 3D S, the the i'th column of x if the ISTFT of S(:,:,i).
 %   k - a scalar describing the instability of the inverse transform. It depends only on the window and hop size.
 %       The minimum value is 1, which means the most stable. 
-%       k=1 is achived for windows and hop sizes whos square value satisfy the COLA (Constant Overlap Add) condition.
+%       k=1 is achived for windows whos square value satisfy the COLA (Constant Overlap Add) condition.
 %
 % [1] Griffin, Daniel, and Jae Lim. "Signal estimation from modified short-time Fourier transform." IEEE Transactions on Acoustics, Speech, and Signal Processing 32.2 (1984): 236-243.
 %

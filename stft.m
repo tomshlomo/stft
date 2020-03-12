@@ -26,7 +26,7 @@ function [S, f, t] = stft(x, window, hop, NFFT, fs)
 % This defnition has several advantages over the more standard, anti-causal one.
 % First, the inverse transform is more stable near the begining of the signal.
 % Second, each frequency of the STFT can be regarded as the (resampled) 
-% output of an FRI filter.
+% output of an FIR filter.
 %
 %
 % Written by Tom Shlomo, 2019
