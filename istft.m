@@ -48,7 +48,11 @@ x = reshape( accumarray(I(:), y(:)), [], Q ); % overlap-add
 L2 = ceil(L/hop)*hop; 
 window(end+1:L2) = 0; % zero pad window to be an integer multiple of hop
 J = mod( (1:hop:L2)' + (0:hop-1) -1, L2 ) + 1;
-denom = sum(window(J).^2, 1)';
+denom = sum(reshape(window(J).^2, [], hop), 1)'; 
+% the reshape above usually does nothing, but it is necessary in the case
+% that L2==hop, since then J is a row vector, and therefore according to
+% MATLAB's weird slicing rules, window(J) is a column vector.
+% (In all other cases, size(window(J)) and size(J) are the same)
 if nargout==2
     k = max(denom)/min(denom);
 end
